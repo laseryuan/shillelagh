@@ -70,6 +70,9 @@ class APSWGSheetsDialect(APSWDialect):
     # for more context.
     supports_statement_cache = True
 
+    # No lastrowid support.
+    postfetch_lastrowid = False
+
     name = "gsheets"
 
     def __init__(  # pylint: disable=too-many-arguments
